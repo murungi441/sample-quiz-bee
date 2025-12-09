@@ -1,0 +1,142 @@
+/*basic reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background: #eee;
+    display: felx;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif ;
+}
+.container{
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+
+}
+/*screens*/
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+
+}
+.screen.active{
+    display: block;
+
+}
+/*start screen*/
+#start-screen h1{
+    color:rgba(82, 82, 7, 0.933);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+#start-screen p{
+    color: #1f0404;
+    margin-bottom: 20px;
+    font-size: 2.9rem;
+
+}
+.practical-header{
+    margin-bottom: 2rem;
+}
+#question-screen{
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+.practical-info{
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    margin-bottom: 10px;
+}
+.answers-container{
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 25px;
+}
+.answer-btn{
+    background-color: #e7dddd;
+    color: #444;
+    border: 2px solid #161515;
+    border-radius: 700px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.answer-btn:hover{
+    background-color: #ad45;
+    border-color: #e345;
+}
+.answer-btn.correct{
+    background-color: rgb(106, 192, 106);
+    border-color:whitesmoke;
+    color: #2b2727;
+}
+.progress-bar{
+height: 10px;
+background-color: #f3e5e5;
+border-radius: 5px;
+overflow: hidden;
+margin-top: 20px;
+}
+.progress{
+    height: 100%;
+    background-color: rgba(46, 2, 6, 0.333);
+    width: 1%;
+    transition: width 0.9s ease;
+}
+#result-screen h1{
+color: #1f0404;
+margin-bottom: 30px;
+
+}
+.result-info p{
+    font-size: 1.2rem;
+    color: #443636;
+    margin-bottom: 1rem;
+}
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(33, 13, 44, 0.333);
+}
+button{
+    background-color: rgba(46, 22, 24, 0.333);
+    color: rgb(54, 53, 51);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease ;
+
+}
+button:hover{
+background-color: rgb(119, 105, 95);    
+}
+/*response*/
+@media (max-width:700px){
+    /*when i hit 700px and below,implement the styles below*/
+    .screen{
+        padding:1rem ;
+    }
+    #start-screen h1{
+        font-size: 2rem;
+    }
+}
